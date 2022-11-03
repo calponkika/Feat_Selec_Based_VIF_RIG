@@ -1,4 +1,5 @@
-- Hi, I’m @calponkika
--I’m interested in machine learning
+The codes support the project that consisting on selecting features based on 
+combination of Variance inflation factor and Robust Information Gain
+
  
 
