@@ -133,11 +133,8 @@ for j1=1:length(G2)
 fprintf('%2d |%3.2f |%3.2f  |%3.3f    ||%3.2f|%3.2f|%3.2f    ||%s \n',j2,IG2(j1),PreInit2(j1), FPR_Init2(j1), AcTIG2(j1), PrTIG2(j1),FprTIG2(j1),CM{j1})
 end
 fprintf('\n')
-fprintf('\n')
-
 fprintf('SUMMARY: DETECTED BEST SAMPLE SIZES \n')
 fprintf('---------------------------------------------------\n')
-
 
 IdxFit=find((AccVIFRIG>AccVIF)&(AccVIFRIG>Acc_init)&(Prec3>Prec2)&(Prec3>Prec)&(Fpr3<FP2)& (Fpr3<FP1)); %%%IdxFitModel2
 
@@ -159,7 +156,7 @@ fprintf('|%d  |%3.2f |%3.2f     || %3.2f |%3.2f   || %3.2f|%3.2f||  \n',IdxFit(t
  for j=1:length(IdxFit)
      Acc_Sel=AccVIFRIG(IdxFit(j));
      Acc_Select(j)=Acc_Sel;
-       
+     
  end
  [MaxAcc,IdxMaxAc]=max(Acc_Select);
   IdxPerf=IdxFit(IdxMaxAc);
@@ -170,7 +167,7 @@ fprintf('|%d  |%3.2f |%3.2f     || %3.2f |%3.2f   || %3.2f|%3.2f||  \n',IdxFit(t
   fprintf('The maximum performance is [%3.2f%%] for accuracy,[%3.2f%%] for precision,and [%3.2f] for FPR rate\n',MaxAcc, MaxPrec,MaxFpr)
   fprintf('The maximum performance is at index [%2d],and preprocessid by using [%s]and VIF-RIG\n',IdxPerf,CM{IdxPerf})
   fprintf('---------------------------------------------------------\n')
-  fprintf('The otpimal sample is \n');
+  fprintf(' \n');
   OptSampl=Inp_VIF_RIF(IdxPerf);
     OptFinal_Input=cell2mat(OptSampl); 
 %   OptFinal_Input=OptSampl{1};
