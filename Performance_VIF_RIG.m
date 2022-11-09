@@ -79,8 +79,6 @@ for i=1:length(B)
      fprintf('Apply VIF+R.I.G on your Sample\n')
     fprintf('=====================================\n')
      Acc_IGVIF=OptFeat_IG_VIF(M,K,InpAcc',Y,Targets);   
-     fprintf('=====================================\n') 
-    fprintf('\n')
     fprintf('\n')
     XRsq=Inpt_N_VIF;
     mdl1 = fitlm( XRsq,Y);%%We dont transpose
